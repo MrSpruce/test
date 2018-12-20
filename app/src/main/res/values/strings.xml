@@ -1,0 +1,38 @@
+<resources>
+    <!--<string name="app_name">MyApplication</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>-->
+    <string name="ic_close">&#xe048;</string>
+    <string name="ic_add">&#xe006;</string>
+    <string name="ic_email">&#xe087;</string>
+    <string name="ic_folder">&#xe09d;</string>
+    <string name="ic_place">&#xe114;</string>
+    <string name="ic_people">&#xe104;</string>
+    <string name="ic_person">&#xe105;</string>
+    <string name="ic_keyboard_arrow_down">&#xe0c5;</string>
+    <string name="ic_keyboard_arrow_left">&#xe0c6;</string>
+    <string name="ic_keyboard_arrow_right">&#xe0c7;</string>
+    <string name="ic_post_blogger">&#xe11e;</string>
+    <string name="ic_post_facebook">&#xe11f;</string>
+    <string name="ic_post_gplus">&#xe120;</string>
+    <string name="ic_post_instagram">&#xe121;</string>
+    <string name="ic_post_linkedin">&#xe122;</string>
+    <string name="ic_post_pinterest">&#xe123;</string>
+    <string name="ic_post_tumblr">&#xe124;</string>
+    <string name="ic_post_twitter">&#xe125;</string>
+    <string name="ic_star">&#xe161;</string>
+    <string name="ic_star_outline">&#xe163;</string>
+    <string name="ic_thumbs_down">&#xe17d;</string>
+    <string name="ic_thumbs_up">&#xe17e;</string>
+
+    <string name="app_name">馆陶县天眼手机国土监察系统</string>
+
+
+    <string name="app_login_name">馆陶县天眼手机国土监察系统</string>
+    <string name="login_input_name">人员姓名</string>
+    <string name="login_input_phone">登录密码</string>
+    <string name="login_register">注册账号</string>
+    <string name="login_text1">馆陶县国土资源局</string>
+    <string name="login_text2">" "</string>
+</resources>

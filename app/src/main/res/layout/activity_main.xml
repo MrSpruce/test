@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="383dp"
+        android:layout_marginStart="383dp"
+        android:layout_marginTop="80dp"
+        android:contentDescription="@drawable/login_logo"
+        android:src="@drawable/login_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="124dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="186dp"
+        android:text="@string/app_login_name"
+        android:textColor="#00a0e9"
+        android:textSize="@dimen/x24px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/app_login_name" />
+
+    <LinearLayout
+        android:id="@+id/ll_input"
+        android:layout_width="@dimen/x615"
+        android:layout_height="@dimen/x80"
+        android:layout_below="@id/tv_appName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="76dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="222dp"
+        android:background="@drawable/login_input"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/et_login_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x98"
+            android:layout_marginStart="@dimen/x98"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/login_input_name"
+            android:maxLength="16"
+            android:singleLine="true"
+            android:textColorHint="#959595"
+            android:textSize="@dimen/x30px" />
+
+        <ImageButton
+            android:id="@+id/ibt_drop_down"
+            android:layout_width="@dimen/x77"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:contentDescription="@drawable/login_input_btn"
+            android:src="@drawable/login_input_btn" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_login_phone"
+        android:layout_width="@dimen/x615"
+        android:layout_height="@dimen/x80"
+        android:layout_below="@id/ll_input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="76dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="272dp"
+        android:background="@drawable/login_input_2"
+        android:digits="1234567890"
+        android:gravity="center_vertical"
+        android:hint="@string/login_input_phone"
+        android:inputType="phone"
+        android:maxLength="11"
+        android:paddingLeft="@dimen/x98"
+        android:textColorHint="#959595"
+        android:textSize="@dimen/x30px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="@dimen/x615"
+        android:layout_height="@dimen/x83"
+        android:layout_below="@id/et_login_phone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="76dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="330dp"
+        android:background="@drawable/login_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/bt_login"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="400dp"
+        android:background="@android:color/transparent"
+        android:text="@string/login_register"
+        android:textColor="#00a0e9"
+        android:textSize="@dimen/x24px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</android.support.constraint.ConstraintLayout>

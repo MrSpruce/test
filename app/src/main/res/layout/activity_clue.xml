@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/clue_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_drawMap_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x98"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/tap_bg"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <RadioGroup
+            android:id="@+id/rg_clue_switch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x98"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/tap_bg"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_address_list"
+                android:layout_width="@dimen/x199"
+                android:layout_height="@dimen/x73"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginTop="@dimen/x13"
+                android:layout_weight = "1"
+                android:text=""
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/x40"
+                android:background="@drawable/radiobutton_background"
+                android:textColor="@drawable/radiobutton_textcolor"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_clue_report"
+                android:layout_width="@dimen/x199"
+                android:layout_height="@dimen/x73"
+                android:layout_centerVertical="false"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginTop="@dimen/x13"
+                android:layout_weight = "1"
+                android:text=""
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/x40"
+                android:background="@drawable/radiobutton_background_shangbao"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_signin_report"
+                android:layout_width="@dimen/x199"
+                android:layout_height="@dimen/x73"
+                android:layout_centerVertical="false"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginTop="@dimen/x13"
+                android:layout_weight = "1"
+                android:text=""
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/x40"
+                android:background="@drawable/radiobutton_background_xuncha"
+                android:button="@null" />
+
+
+            <RadioButton
+                android:id="@+id/rb_block_showMap"
+                android:layout_width="@dimen/x199"
+                android:layout_height="@dimen/x73"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginTop="@dimen/x13"
+                android:layout_weight = "1"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="false"
+                android:text=""
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:textSize="@dimen/x40"
+                android:background="@drawable/radiobutton_background_guanli"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_system_set"
+                android:layout_width="@dimen/x199"
+                android:layout_height="@dimen/x73"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginTop="@dimen/x13"
+                android:layout_marginRight="@dimen/x10"
+                android:layout_weight = "1"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textSize="@dimen/x40"
+                android:background="@drawable/radiobutton_background_shezhi"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_video_scan"
+                android:layout_width="@dimen/x199"
+                android:layout_height="@dimen/x73"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_marginTop="@dimen/x13"
+                android:layout_marginRight="@dimen/x10"
+                android:layout_weight = "1"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/x40"
+                android:background="@drawable/base_information_input"
+                android:button="@null" />
+        </RadioGroup>
+    </RelativeLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

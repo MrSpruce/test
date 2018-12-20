@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x96"
+        android:background="@drawable/nav_bg"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/ibt_back"
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/x50"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x29"
+            android:background="@android:color/transparent"
+            android:contentDescription="@drawable/nav_btn_1"
+            android:src="@drawable/nav_btn_1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="地图"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/x44px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x98"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/tap_bg" >
+
+        <Button
+            android:id="@+id/bt_previous"
+            android:layout_width="@dimen/x70"
+            android:layout_height="@dimen/x78"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x84"
+            android:background="@drawable/bt_shangyibu_selector" />
+
+        <Button
+            android:id="@+id/bt_map_edit"
+            android:layout_width="@dimen/x47"
+            android:layout_height="@dimen/x79"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bt_bianji_selector" />
+
+        <Button
+            android:id="@+id/bt_sure"
+            android:layout_width="@dimen/x50"
+            android:layout_height="@dimen/x78"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x97"
+            android:background="@drawable/bt_queding_selector" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_drawMap_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x98"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/tap_bg"
+        android:visibility="visible" >
+
+        <Button
+            android:id="@+id/bt_drawMap_add"
+            android:layout_width="@dimen/x46"
+            android:layout_height="@dimen/x79"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x66"
+            android:background="@drawable/bt_map_draw_tianjia_selector" />
+
+        <Button
+            android:id="@+id/bt_drawMap_backup"
+            android:layout_width="@dimen/x50"
+            android:layout_height="@dimen/x73"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x133"
+            android:layout_toRightOf="@id/bt_drawMap_add"
+            android:background="@drawable/bt_map_draw_chexiao_selector" />
+
+        <Button
+            android:id="@+id/bt_drawMap_qingchu"
+            android:layout_width="@dimen/x48"
+            android:layout_height="@dimen/x70"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x66"
+            android:background="@drawable/bt_map_draw_qingchu_selector" />
+
+        <Button
+            android:id="@+id/bt_drawMap_baocun"
+            android:layout_width="@dimen/x48"
+            android:layout_height="@dimen/x74"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x133"
+            android:layout_toLeftOf="@id/bt_drawMap_qingchu"
+            android:background="@drawable/bt_map_draw_baocun_selector" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/rl_bottom"
+        android:layout_marginTop="@dimen/x96" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/baiduMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x21"
+            android:layout_centerInParent="true"
+            android:contentDescription="@drawable/latlng_icon"
+            android:src="@drawable/latlng_icon" />
+
+        <ImageButton
+            android:id="@+id/ibt_map_bi"
+            android:layout_width="@dimen/x86"
+            android:layout_height="@dimen/x86"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/x300"
+            android:layout_marginRight="@dimen/x16"
+            android:background="@drawable/btn_bg_bi"
+            android:contentDescription="@drawable/bt_map_bi_selector"
+            android:src="@drawable/bt_map_bi_selector" />
+
+        <ImageButton
+            android:id="@+id/ibt_map_qiehuan"
+            android:layout_width="@dimen/x86"
+            android:layout_height="@dimen/x86"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/x23"
+            android:layout_marginRight="@dimen/x16"
+            android:background="@drawable/bt_map_qiehuan_selector"
+            android:contentDescription="@drawable/bt_map_qiehuan_selector"/>
+
+        <ImageButton
+            android:id="@+id/ibt_map_dingwei"
+            android:layout_width="@dimen/x86"
+            android:layout_height="@dimen/x86"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/x23"
+            android:layout_marginLeft="@dimen/x18"
+            android:background="@drawable/btn_bg_dingwei"
+            android:contentDescription="@drawable/bt_map_bi_selector"
+            android:src="@drawable/bt_map_dingwei_selector" />
+
+        <LinearLayout
+            android:layout_width="@dimen/x86"
+            android:layout_height="@dimen/x172"
+            android:layout_above="@id/ibt_map_bi"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/x79"
+            android:layout_marginRight="@dimen/x16"
+            android:background="@drawable/btn_bg_jiajian"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/ibt_map_big"
+                android:layout_width="@dimen/x86"
+                android:layout_height="@dimen/x86"
+                android:background="@android:color/transparent"
+                android:contentDescription="@drawable/bt_map_bi_selector"
+                android:src="@drawable/bt_map_big_selector" />
+
+            <ImageButton
+                android:id="@+id/ibt_map_small"
+                android:layout_width="@dimen/x86"
+                android:layout_height="@dimen/x86"
+                android:background="@android:color/transparent"
+                android:contentDescription="@drawable/bt_map_bi_selector"
+                android:src="@drawable/bt_map_small_selector" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

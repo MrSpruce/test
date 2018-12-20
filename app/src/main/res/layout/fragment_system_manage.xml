@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homg_bg" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x96"
+        android:background="@drawable/nav_bg"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="上报设置"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/x44px" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_apply_setting"
+        android:layout_width="@dimen/x615"
+        android:layout_height="@dimen/x83"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x47"
+        android:background="@drawable/btn_shangbao" />
+
+    <RelativeLayout
+        android:id="@+id/title_updatePwd"
+        android:layout_width="match_parent"
+        android:layout_below="@id/bt_apply_setting"
+        android:layout_marginTop="@dimen/x68"
+        android:layout_height="@dimen/x96"
+        android:background="@drawable/nav_bg"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="系统设置"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/x44px" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_update_pwd"
+        android:layout_width="@dimen/x615"
+        android:layout_height="@dimen/x83"
+        android:layout_below="@id/title_updatePwd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/x47"
+        android:background="@drawable/btn_update_pwd" />
+
+
+
+        <Button
+            android:id="@+id/bt_port_setting"
+            android:layout_below="@id/bt_update_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="端口设置"
+            android:textColor="#ffffff"
+            android:layout_marginTop="@dimen/x47"
+            android:background="@drawable/nav_bg"
+            android:textSize="@dimen/x44px" />
+
+
+</RelativeLayout>
