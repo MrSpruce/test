@@ -1,0 +1,186 @@
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+
+    <view class='column'>
+      <view class='row'>
+        <image mode="widthFix" style="width:5%;margin:auto 5px; margin-left:20px" src='../../image/addfriend.png' />
+        <text>同行好友</text>
+      </view>
+      <view class='row' style='margin-left:20px'>
+        <image class="icon-image" src='../../image/add.png' />
+        <image class="icon-image" src="../../image/user1.jpg" />
+        <image class="icon-image" src="../../image/user2.jpg" />
+        <image class="icon-image" src="../../image/user3.jpg" />
+      </view>
+      <text class='line'></text>
+    </view>
+
+
+
+
+    <view class='column'>
+      <!-- <view class="section section_gap"> -->
+      <view class='row'>
+        <image mode="widthFix" style="width:5%;margin:auto 6px;margin-left:20px" src='../../image/time.png' />
+        <view> 空闲时段</view>
+      </view>
+      <!-- 时间段 -->
+      <view class="picker_group">
+        <picker mode="time" value="{{time}}" end="{{time2}}" bindchange="bindDateChange">
+          <view class="picker">
+            {{time}}
+          </view>
+        </picker>
+        至
+        <picker mode="time" value="{{time2}}" start="{{time}}" end="23：00" bindchange="bindDateChange2">
+          <view class="picker">
+            {{time2}}
+          </view>
+        </picker>
+      </view>
+      <text class='line'></text>
+
+    </view>
+    <view class='column'>
+      <view class='row'>
+        <image mode="widthFix" style="width:5%;margin:auto 5px;margin-left:20px" src='../../image/position.png' />
+        <text> 活动区间</text>
+      </view>
+      <view class='position_group'>
+        <input class='position' placeholder='聚前位置' value='{{chooseAddressBefore}}' bindtap='onChangeAddressBefore'></input>
+        <text style='margin: auto 2px'> — </text>
+        <input class='position' placeholder='聚后位置' value='{{chooseAddressAfter}}' bindtap='onChangeAddressAfter'></input>
+      </view>
+      <text class='line'></text>
+
+    </view>
+    <view class='row'>
+      <image mode="widthFix" style="width:5%;margin:auto 5px;margin-left:20px" src='../../image/plane.png' />
+      <text> 出行方式</text>
+    </view>
+    <view class="segmentedControl" style='margin-left:20px'>
+      <!-- 循环遍历 -->
+      <block wx:for="{{radioValues}}">
+        <text data-index="{{index}}" bindtap="indexChanged" class="{{clazz[index]}}">{{item.value}}</text>
+      </block>
+    </view>
+    <text class='line'></text>
+
+
+
+
+    <view class='row' style='margin:-17px auto auto'>
+
+      <image mode="widthFix" style="width:5%;margin:auto 5px;margin-left:20px" src='../../image/active.png' />
+      <text bindtap='showActiveType'>活动类型</text>
+      <image mode="widthFix" style="width:3%;margin:auto 5px;" bindtap='showActiveType' src='../../image/right.png' />
+    </view>
+
+    <button class='btn'>完成</button>
+  </view>
+
+
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showActiveTypeStatus }}">
+    <view class='row'>
+      <image mode="widthFix" style="width:5%;margin:auto 5px;margin-left:20px" src='../../image/active.png' />
+      <text> 活动类型</text>
+    </view>
+
+    <view class="segmentedControl" style='margin-left:20px'>
+      <!-- 循环遍历 -->
+
+      <view bindtap='clickjvcan'>
+        <text class="{{selsectState[0]?'selected':''}}">聚餐</text>
+      </view>
+      <view bindtap='clickjvwan'>
+        <text class="{{selsectState[1]?'selected':''}}">聚玩</text>
+      </view>
+      <view bindtap='clickwork'>
+        <text class="{{selsectState[2]?'selected':''}}">办公</text>
+      </view>
+    </view>
+    <view class="more_container ">
+      <view wx:if="{{selectIndex==0}}">
+
+        <view class="control1">
+
+          <view bindtap='clickjvcan_option' data-jvcan="0">
+            <text class="{{jvcan_option[0]?'selected':''}}">咖啡厅</text>
+          </view>
+          <view bindtap='clickjvcan_option' data-jvcan="1">
+            <text class="{{jvcan_option[1]?'selected':''}}">火锅</text>
+          </view>
+          <view bindtap='clickjvcan_option' data-jvcan="2">
+            <text class="{{jvcan_option[2]?'selected':''}}">烧烤</text>
+          </view>
+          <view bindtap='clickjvcan_option' data-jvcan="3">
+            <text class="{{jvcan_option[3]?'selected':''}}">西餐</text>
+          </view>
+          <view bindtap='clickjvcan_option' data-jvcan="4">
+            <text class="{{jvcan_option[4]?'selected':''}}">川菜</text>
+
+          </view>
+          <view bindtap='clickjvcan_option' data-jvcan="5">
+            <text class="{{jvcan_option[5]?'selected':''}}">西北菜</text>
+          </view>
+        </view>
+
+      </view>
+      <view wx:if="{{selectIndex==1}}">
+        <view class="control1">
+          <view bindtap='clickjvwan_option' data-jvwan="0">
+            <text class="{{jvwan_option[0]?'selected':''}}">KTV</text>
+          </view>
+          <view bindtap='clickjvwan_option' data-jvwan="1">
+            <text class="{{jvwan_option[1]?'selected':''}}">电影</text>
+          </view>
+          <view bindtap='clickjvwan_option' data-jvwan="2">
+            <text class="{{jvwan_option[2]?'selected':''}}">购物</text>
+          </view>
+
+        </view>
+
+
+      </view>
+      <view wx:if="{{selectIndex==2}}">
+        <view class="control1">
+          <view bindtap='clickwork_option' data-work="0">
+            <text class="{{work_option[0]?'selected':''}}">联合办公</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <text class='line'></text>
+    <view class='row' style='margin:-10px auto auto'>
+      <image mode="widthFix" style="width:5%;margin:auto 5px;margin-left:20px" src='../../image/type.png' />
+      <text> 商家风格 </text>
+    </view>
+    <view class="segmentedControl " style='margin-left:20px'>
+
+      <view bindtap='clickplace_type' data-place="0">
+        <text class="{{place_type[0]?'selected':''}}">随性</text>
+      </view>
+      <view bindtap='clickplace_type' data-place="1">
+        <text class="{{place_type[1]?'selected':''}}">商务</text>
+      </view>
+      <view bindtap='clickplace_type' data-place="2">
+        <text class="{{place_type[2]?'selected':''}}">传统</text>
+      </view>
+      <view bindtap='clickplace_type' data-place="3">
+        <text class="{{place_type[3]?'selected':''}}">阳光</text>
+      </view>
+      <view bindtap='clickplace_type' data-place="4">
+        <text class="{{place_type[4]?'selected':''}}">情调</text>
+
+      </view>
+      <view bindtap='clickplace_type' data-place="5">
+        <text class="{{place_type[5]?'selected':''}}">潮范</text>
+      </view>
+      <view bindtap='clickplace_type' data-place="6">
+        <text class="{{place_type[6]?'selected':''}}">休闲</text>
+      </view>
+    </view>
+
+    <text class='line'></text>
+    <button bindtap='recommendPOI' class='btn'>完成</button>
+
+  </view>

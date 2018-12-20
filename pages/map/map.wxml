@@ -1,0 +1,34 @@
+ <map
+      id="myMap"
+      subkey="76MBZ-W4GCU-YOUV3-BYV73-TU43E-IHBEL"
+      style="width: 100%; height:580px;"
+      latitude="{{latitude}}"
+      longitude="{{longitude}}"
+      markers="{{markers}}"
+      covers="{{covers}}"
+      show-location
+    > 
+  <!-- <cover-view class="post-left">
+   <cover-image src='../../image/location.png' bindtap="moveToLocation" style='max-width:30px;max-height:30px' />
+   </cover-view> -->
+    <cover-view animation="{{animationData}}" class="commodity_attr_box" >
+    <cover-view class='row'>
+      <cover-image mode="widthFix" style="width:5%;margin:auto 5px;margin-left:20px" src='../../image/active.png' />
+      <cover-view style='font-size:20px;margin-bottom:10px'>巷聚点</cover-view> 
+    </cover-view>  
+<cover-view class='column'>
+   
+      <cover-view class='column' wx:for="{{markers}}" wx:key="title" wx:for-index="index" style="display: block;">
+        <cover-image class="icon-image" src='../../image/cafe1.jpg' /> 
+      
+       <cover-view style='font-size:15px ' bindtap='dh{{index}}' >{{index+1}}{{item.title}} </cover-view>
+       <cover-view class='poiAddress' style='font-size:9.5px;margin-top:10px;'>{{item.address}} </cover-view>
+       
+      
+      </cover-view>
+    
+
+  </cover-view>
+</cover-view>
+   
+   </map>
