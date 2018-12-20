@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion Integer.parseInt(COMPILE_SDK_VERSION)
+    buildToolsVersion BUILDTOOLS_VERSION
+    defaultConfig {
+        applicationId "com.dss.demo"
+        minSdkVersion Integer.parseInt(MIN_SDK_VERSION)
+        targetSdkVersion Integer.parseInt(TARGET_SDK_VERSION)
+        versionCode 6
+        versionName "1.6"
+        ndk {
+            abiFilters 'armeabi'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+            dirs '../AudioTalk/libs'
+            dirs '../WindowComponent/libs'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:${SUPPORT_LIB_VERSION}"
+    implementation "com.android.support:design:${SUPPORT_LIB_VERSION}"
+    implementation 'com.google.code.gson:gson:2.2.4'
+    implementation "com.android.support:recyclerview-v7:${SUPPORT_LIB_VERSION}"
+    implementation(name: 'PullToRefresh_Library-release', ext: 'aar')
+    implementation(name: 'AudioTalk-release', ext: 'aar')
+    implementation(name: 'BaseLib-release', ext: 'aar')
+    implementation(name: 'DataAdapteeModule-release', ext: 'aar')
+    implementation(name: 'DataAdapterModule-release', ext: 'aar')
+    implementation(name: 'DHCommon-release', ext: 'aar')
+    implementation(name: 'DHPlayLibCloudModule-release', ext: 'aar')
+    implementation(name: 'DssPlaySDK-release', ext: 'aar')
+    implementation(name: 'EntityDefine-release', ext: 'aar')
+    implementation(name: 'LogModule-release', ext: 'aar')
+    implementation(name: 'OrmliteSqlcipherModlule-release', ext: 'aar')
+    implementation(name: 'PlayManager-release', ext: 'aar')
+    implementation(name: 'WindowComponent-release', ext: 'aar')
+
+}
